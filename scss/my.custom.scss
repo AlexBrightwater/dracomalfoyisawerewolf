@@ -1,0 +1,337 @@
+/*TITLE --> IMPORTS*/
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+
+/*TITLE --> ROOT*/
+:root {
+   /* Settings Icons*/
+   --settingsiconssize: 18px;
+   --settingsiconsgap: 14px;
+
+   /*My custom colors*/
+   --dark: #222429;
+   --mid: #282e33;
+   --light: #33393f;
+   --textfield: #3d444b;
+   --nogreen: #33533e8c;
+   --darktext: #b9bbbe;
+
+   /*GREEN*/
+   --card-bs: rgb(30, 95, 62);
+   --cardcolor: rgb(36, 133, 84);
+   --thisgreen: rgb(67, 197, 111);
+   --darkergreen: rgb(55, 168, 93);
+}
+/*TITLE --> REMOVAL OF UI ELEMENTS*/
+
+/*Remove OG Icons from settings. I have new ones*/
+/* 🠗 get rid of the nitro icons 🠗 */
+.icon-Zc-uZZ {
+   display: none;
+}
+
+/* 🠗 server boost status icon 🠗 */
+.icon-3Povsy {
+   display: none;
+}
+
+.bd-icon {
+   margin-right: 5px;
+}
+
+.barFill-23-gu- {
+   background-color: var(--thisgreen);
+}
+
+/*Remove notes from left klick on user*/
+/**/
+.textarea-2r0oV8,
+.inputDefault-_djjkz,
+.input-cIJ7To {
+   display: none;
+}
+.bodyTitle-Y0qMQz,
+.marginBottom8-AtZOdT,
+.size12-3R0845 {
+   display: none;
+}
+.userInfoSectionHeader-CBvMDh {
+   display: none;
+}
+
+/*remove rightklick hint from left klick on user*/
+.footer-1fjuF6 {
+   display: none;
+}
+
+/*Profile card remove notes*/
+.userInfoSection-2acyCx:nth-child(1) {
+   display: none !important;
+}
+.userInfoSection-2acyCx {
+   border: none !important;
+}
+
+/*Hide members when window small*/
+@media (max-width: 1000px) {
+   .membersWrap-2h-GB4,
+   .hiddenMembers-2dcs_q {
+      display: none;
+   }
+}
+
+/*Hide overcomplicated animations in settings*/
+.layer-3QrUeG {
+   transform: none !important;
+   opacity: 1 !important;
+}
+.layers-3iHuyZ > .layer-3QrUeG.animating-rRxada *,
+.layers-3iHuyZ > .layer-3QrUeG.animating-rRxada {
+   pointer-events: auto !important;
+   will-change: unset;
+}
+.animating-rRxada.stop-animations {
+   z-index: 100 !important;
+}
+
+/* 🠗 Hide GIF button 🠗*/
+.buttonContainer-28fw2U:not(.send-button) .button-3AYNKb,
+ /* 🠗 Hide GIft button 🠗*/
+ .buttons-3JBrkn > .button-38aScr > :not(.translateButton-DhP9x8) {
+   display: none;
+}
+
+/*Remove Discovery Button*/
+.tutorialContainer-30WoTp + div {
+   display: none;
+}
+
+/*Hide nitro tab in DMs List */
+#private-channels a[href="/store"] {
+   display: none;
+}
+
+/*TITLE --> ADD UI ELEMENTS*/
+
+/*TITLE --> CHANGE UI ELEMENTS*/
+
+/*Server Mute im Context menu*/
+#user-context-voice-mute {
+   color: rgb(230, 56, 56);
+   text-shadow: 1px 1px #000000;
+}
+
+/*Bot Tag Color*/
+.botTag-3W9SuW,
+.botTagRegular-2HEhHi,
+.botTag-2WPJ74,
+.px-10SIf7,
+.botText-1526X_ {
+   background-color: var(--light);
+   color: var(--darktext);
+}
+/*Verified Bot Tag Tick*/
+.botTagVerified-1klIIt {
+   display: none;
+}
+/* Move Crown im VC*/
+.ownerIcon-2NH9FM,
+.icon-1A2_vz,
+.owner-FfFh3B {
+   margin-right: 5px;
+}
+
+/*All Buttons*/
+.lookFilled-1Gx00P.colorBrand-3pXr91,
+.theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV,
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6 {
+   background-color: var(--darkergreen);
+}
+.lookFilled-1Gx00P.colorBrand-3pXr91:hover,
+.theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV:hover,
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:hover {
+   background-color: var(--thisgreen);
+}
+
+/*Reaction Colors*/
+.reaction-1hd86g.reactionMe-wv5HKu {
+   border-color: var(--thisgreen) !important;
+   background-color: var(--nogreen) !important;
+}
+
+/*recolor name when in left klick*/
+.username,
+.username-2b1r56,
+.headerTagUsernameNoNickname-2_H881 {
+   color: var(--thisgreen) !important;
+}
+.username-2b1r56 + span {
+   color: var(--darktext) !important;
+}
+.headerName-fajvi9,
+.size16-14cGz5 {
+   color: var(--thisgreen) !important;
+}
+/*Username color on Profile card*/
+.username-3gJmXY {
+   color: var(--thisgreen) !important;
+}
+
+/*Profile card send frined request/ friend request*/
+.topSectionPlaying-1J5E4n .actionButton-3W1xZa {
+   color: white;
+   background-color: var(--darkergreen) !important;
+}
+.topSectionPlaying-1J5E4n .actionButton-3W1xZa:hover {
+   background-color: var(--thisgreen) !important;
+}
+
+/*Context menu animation*/
+.menu-3sdvDG {
+   animation: custom-menu-animation 150ms ease;
+   transform-origin: top;
+}
+@keyframes custom-menu-animation {
+   0% {
+      transform: scaleY(0);
+   }
+   100% {
+      transform: scaleY(1);
+   }
+}
+
+/*Replaces the long discord message links with "Jump to Message" */
+[href^="https://discord.com/channels/"]
+{
+   line-height: 0;
+   font-size: 0;
+}
+[href^="https://discord.com/channels/"]::before
+{
+   content: "Jump to Message";
+   font-size: 16px;
+   font-weight: 700;
+}
+
+/*Discord Logo Icon*/
+.homeIcon-FuNwkv path {
+   fill: transparent;
+}
+.homeIcon-FuNwkv {
+   background: url("https://cdn.icon-icons.com/icons2/2108/PNG/512/discord_icon_130958.png") center/cover no-repeat;
+   min-width: 50px;
+   min-height: 50px;
+   filter: grayscale(100%) brightness(65%) contrast(200%);
+}
+
+.homeIcon-FuNwkv:hover {
+   transition: 0.3s;
+   filter: grayscale(0);
+}
+
+/*icon next to chat --> remove green talking ring*/
+.avatarSpeaking-2c8-9i {
+   display: none;
+}
+
+/*when message is selected to be replied to*/
+.replying-1x3H0T {
+   background-color: rgba(66, 97, 80, 0.12) !important;
+}
+.replying-1x3H0T:hover {
+   background-color: rgba(83, 136, 104, 0.14) !important;
+}
+.replying-1x3H0T:before {
+   background-color: var(--thisgreen) !important;
+}
+
+/*Image name color*/
+.anchor-3Z-8Bb {
+   color: var(--thisgreen);
+}
+/*Link text color*/
+.anchor-3Z-8Bb,
+.anchorUnderlineOnHover-2ESHQB {
+   color: var(--thisgreen) !important;
+}
+/*Tags*/
+.mention {
+   background-color: transparent !important;
+   color: var(--thisgreen) !important;
+}
+
+/*Left Klick on Profile:*/
+/*PLaying Background*/
+.headerPlaying-j0WQBV > .activity-11LB_k {
+   background-color: var(--cardcolor) !important;
+   box-shadow: 0px 4px 0px var(--card-bs) !important;
+   margin-bottom: 10px;
+}
+/*PLaying Button*/
+.headerPlaying-j0WQBV > .activity-11LB_k .button-2IFFQ4 {
+   background-color: var(--darkergreen) !important;
+   box-shadow: 0px 2px 4px var(--darkergreen) !important;
+   color: white !important;
+}
+.headerPlaying-j0WQBV > .activity-11LB_k .button-2IFFQ4:hover {
+   background-color: var(--thisgreen) !important;
+   box-shadow: 0px 2px 4px var(--thisgreen) !important;
+   color: white !important;
+}
+
+/*Streaming Background*/
+.headerStreaming-2FjmGz > .activity-11LB_k {
+   background-color: rgb(89, 54, 149) !important;
+   box-shadow: 0px 4px 0px rgb(116, 71, 194) !important;
+}
+/*Streaming Button*/
+.headerStreaming-2FjmGz > .activity-11LB_k .button-2IFFQ4 {
+   background-color: rgb(109, 66, 185) !important;
+   box-shadow: 0px 2px 4px rgb(79, 47, 134);
+   color: white !important;
+}
+/*Streaming Button Hover*/
+.headerStreaming-2FjmGz > .activity-11LB_k .button-2IFFQ4:hover {
+   background-color: rgb(121, 73, 206) !important;
+   box-shadow: 0px 2px 4px rgb(91, 54, 155);
+   color: white !important;
+}
+
+/*Profile Card:*/
+/*PLaying Background*/
+.topSectionPlaying-1J5E4n .activityProfile-2bJRaP {
+   background-color: var(--cardcolor) !important;
+   box-shadow: 0px 4px 0px var(--card-bs) !important;
+   margin-bottom: 10px;
+}
+/*PLaying Button*/
+.topSectionPlaying-1J5E4n .activityProfile-2bJRaP .button-2IFFQ4 {
+   background-color: var(--darkergreen) !important;
+   box-shadow: 0px 2px 4px var(--darkergreen) !important;
+   color: white !important;
+}
+/*Playing Button Hover*/
+.topSectionPlaying-1J5E4n .activityProfile-2bJRaP .button-2IFFQ4:hover {
+   background-color: var(--thisgreen) !important;
+   box-shadow: 0px 2px 4px var(--thisgreen) !important;
+   color: white !important;
+}
+
+/*Streaming Background*/
+.topSectionStreaming-1Tpf5X .activityProfile-2bJRaP {
+   background-color: rgb(89, 54, 149) !important;
+   box-shadow: 0px 4px 0px rgb(116, 71, 194) !important;
+}
+/*Streaming Button*/
+.topSectionStreaming-1Tpf5X .activityProfile-2bJRaP .button-2IFFQ4 {
+   background-color: rgb(109, 66, 185) !important;
+   box-shadow: 0px 2px 4px rgb(79, 47, 134);
+   color: white !important;
+}
+/*Streaming Button Hover*/
+.topSectionStreaming-1Tpf5X .activityProfile-2bJRaP .button-2IFFQ4:hover {
+   background-color: rgb(121, 73, 206) !important;
+   box-shadow: 0px 2px 4px rgb(91, 54, 155);
+   color: white !important;
+}
+
+/*Profile card */

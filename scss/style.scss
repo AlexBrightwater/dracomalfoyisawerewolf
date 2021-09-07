@@ -1,0 +1,151 @@
+@import "variables";
+
+*,
+::before,
+::after {
+   box-sizing: border-box !important;
+}
+
+:root {
+   background-color: $bg;
+   color: $color;
+   font-family: "Roboto", sans-serif;
+   font-size: 1.09rem;
+
+   scrollbar-width: thin; /*Scrollbar für FireBug*/
+   scrollbar-color: $primary $secondary; /*Scrollbar für FireBug*/
+}
+::selection {
+   background-color: #2d9e54;
+   color: black;
+}
+
+/*Scrollbar*/
+/* width */
+::-webkit-scrollbar {
+   width: $scrollbar-width;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background-color: $secondary;
+}
+
+/* Handle, handle on hover */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+   background: $primary;
+}
+
+div#container {
+   width: 70%;
+   margin-left: 15%;
+}
+div#content p {
+   padding-top: 0;
+   margin-top: 0;
+}
+
+footer {
+   background-color: $fbg;
+   position: absolute;
+   left: 0px;
+   right: 0px;
+   padding-left: 15%;
+   padding-right: 15%;
+   padding-bottom: 100px;
+   button {
+      border: none;
+      background-color: #2d9e54;
+      height: 35px;
+      width: 105px;
+      cursor: pointer;
+   }
+   button:hover {
+      @include linkHover;
+   }
+}
+
+a {
+   @include link;
+}
+a:hover,
+a:focus {
+   @include linkHover;
+   outline: none;
+   ::selection {
+      color: $secondary;
+   }
+}
+a:focus {
+   text-decoration: underline;
+}
+a::selection {
+   color: $primary;
+}
+
+.italic {
+   font-style: italic;
+   color: $secondary;
+}
+header {
+   @include title;
+   ::selection {
+      background-color: #2d9e54;
+      color: $primary;
+   }
+}
+main {
+   display: flex;
+   h1,
+   h2,
+   h3 {
+      @include title;
+   }
+}
+div#content {
+   padding-right: 5px;
+}
+
+/*MEDIA*/
+div#media {
+   width: $media-width;
+}
+div.img_all {
+   background-color: #255835;
+   border: 3px groove rgb(174, 0, 255);
+   img {
+      max-width: fit-content;
+      width: $media-width;
+   }
+   div.img_desc p {
+      background-color: #255835;
+      max-width: calc(100% - 6px);
+      text-align: center;
+      padding-bottom: 6px;
+      margin: 0 !important;
+   }
+}
+iframe {
+   margin-top: 20px;
+   border: 3px groove rgb(174, 0, 255);
+   width: $media-width;
+}
+/*end media*/
+
+.right {
+   margin-top: 0.5%;
+   margin-left: 10%;
+}
+
+div#language {
+   position: absolute;
+   top: 0;
+   right: 0;
+   display: flex;
+   img {
+      width: 50px;
+      height: 30px;
+      margin: 5px;
+   }
+}
