@@ -102,6 +102,11 @@ main {
    h3 {
       @include title;
    }
+   h1::selection,
+   h2::selection,
+   h3::selection {
+      @include title;
+   }
 }
 div#content {
    padding-right: 5px;
